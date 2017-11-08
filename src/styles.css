@@ -12,10 +12,66 @@
   font-family: Ubuntu;
   font-size: 1.5em;
 }
-footer {
-  position: absolute;
+
+.cheese-grid {
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
   text-align: center;
-  bottom: 0;
+  padding: 32px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+  .column img {
+    margin-top: 12px;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+footer {
+  position: fixed;
   left: 0;
+  bottom: 0;
   width: 100%;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  color: white;
 }
