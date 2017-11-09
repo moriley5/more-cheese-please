@@ -12,10 +12,11 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 
 
-const appRoutes: Routes = [
+const routes: Routes = [
   { path: ' ', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: GridComponent},
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
