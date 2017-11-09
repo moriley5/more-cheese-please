@@ -1,37 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-.app-title {
-  padding-top: 75px;
-  text-align: center;
-  font-family: Ubuntu;
-  font-size: 5em;
-}
-
-.app-subtitle {
-  text-align: center;
-  font-family: Ubuntu;
-  font-size: 1.5em;
-}
-
-.cheese-grid {
-  width: 75%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 * {
   box-sizing: border-box;
 }
 
-body {
+body, html {
   margin: 0;
-  font-family: Arial;
+  height: 100%;
 }
 
-.header {
-  text-align: center;
-  padding: 32px;
-}
 
 /* Create four equal columns that floats next to each other */
 .column {
@@ -73,5 +50,4 @@ footer {
   background-color: #000;
   color: white;
   text-align: center;
-  color: white;
 }
