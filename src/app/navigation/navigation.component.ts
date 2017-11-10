@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -8,11 +8,24 @@ import { Router } from '@angular/router';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
-  //this.router.navigate(['/about']);
+  goToAboutPage() {
+    console.log("Clicked on About!");
+    // How to redirect to entirely new page???
+    this.router.navigate(['/about']);
+  }
 
+  goToContactPage() {
+    console.log("Clicked on Contact!");
+    // How to redirect to entirely new page???
+    this.router.navigate(['/contact']);
+
+    /* TO-DO
+    Create a navigation.module.ts file with its own route configuration
+    */
+  }
 }
