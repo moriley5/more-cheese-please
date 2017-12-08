@@ -14,7 +14,7 @@
   height: 200px;
 }
 
-/* Create four equal columns that floats next to each other */
+/* Create four equal columns that float next to each other */
 .column {
   float: left;
   width: 25%;

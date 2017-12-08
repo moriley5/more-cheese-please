@@ -12,4 +12,12 @@ export class GridComponent implements OnInit {
   ngOnInit() {
   }
 
+  onMouseEnter(div: string) {
+    console.log("mouse enter : " + div);
+  }
+
+  mouseLeave(div: string) {
+    console.log('mouse leave :' + div);
+  }
+
 }
