@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheeseComponent implements OnInit {
 
+  // Declare properties of individual type of cheese
+  cheeseProfile: CheeseProfile;
+
   constructor() { }
 
   ngOnInit() {
@@ -17,4 +20,11 @@ export class CheeseComponent implements OnInit {
     console.log("Mouse enter: " + div);
   }
 
+}
+
+// Create interface (need to put this in a model)
+interface CheeseProfile {
+  name: string,
+  origin: string,
+  description: string
 }

@@ -13,8 +13,8 @@ import { HeaderComponent } from './header/header.component';
 
 
 const routes: Routes = [
-  { path: ' ', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: GridComponent},
+  { path: 'home', component: GridComponent },
+  //{ path: 'cheese/:id', component: CheeseComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent }
 ];
