@@ -1,19 +1,17 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">More Cheese Please</a>
+      <a class="navbar-brand" routerLink="home">More Cheese Please</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a routerLink="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-star"></span> Cheese of the Day</a></li>
+      <li routerLinkActive="active"><a routerLink="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li routerLinkActive="active"><a routerLink="/cheese/:id"><span class="glyphicon glyphicon-star"></span> Cheese of the Day</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="/about" (click)="goToAboutPage()"><span class="glyphicon glyphicon-user"></span> About</a></li>
-      <li><a routerLink="/contact" (click)="goToContactPage()"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+      <li routerLinkActive="active"><a routerLink="/about" (click)="goToAboutPage()"><span class="glyphicon glyphicon-user"></span> About</a></li>
+      <li routerLinkActive="active"><a routerLink="/contact" (click)="goToContactPage()"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <app-header></app-header>
-
-<router-outlet></router-outlet>

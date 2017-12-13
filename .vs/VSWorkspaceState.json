@@ -3,9 +3,12 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\cheese",
-    "\\src\\app\\grid"
+    "\\src\\app\\about",
+    "\\src\\app\\contact",
+    "\\src\\app\\grid",
+    "\\src\\app\\header",
+    "\\src\\app\\navigation"
   ],
-  "SelectedNode": "\\src\\app\\cheese\\cheese.component.ts",
+  "SelectedNode": "\\src\\app\\contact\\contact.component.html",
   "PreviewInSolutionExplorer": false
 }
