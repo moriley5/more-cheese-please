@@ -1,64 +1,9 @@
 <!-- Cheese Photo Grid -->
 <div class="container cheese-grid">
   <div class="row">
-    <div class="col-md-4">
-      <div (mouseenter) ="onMouseEnter('Div A')" (mouseleave) ="mouseLeave('Div A')"class="thumbnail">
-          <img src="/assets/images/cheese/asiago.jpg" class="cheese" alt="asiago" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div (mouseenter) ="onMouseEnter('Div A')" (mouseleave) ="mouseLeave('Div A')" class="thumbnail">
-          <img src="/assets/images/cheese/brie.jpg" class="cheese" alt="brie" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
+    <div *ngFor="let cheese of cheeses" class="col-md-4">
       <div class="thumbnail">
-          <img src="/assets/images/cheese/camembert.jpg" class="cheese" alt="camembert" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="/assets/images/cheese/cheddar.jpg" class="cheese" alt="camembert" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="/assets/images/cheese/colby-jack.jpg" class="cheese" alt="camembert" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="/assets/images/cheese/feta.jpg" class="cheese" alt="camembert" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="/assets/images/cheese/gorgonzola.jpg" class="cheese" alt="camembert" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="/assets/images/cheese/gouda.jpg" class="cheese" alt="camembert" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="/assets/images/cheese/mozzarella.jpg" class="cheese" alt="camembert" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="/assets/images/cheese/romano.jpg" class="cheese" alt="camembert" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="/assets/images/cheese/roquefort.jpg" class="cheese" alt="camembert" style="width:100%">
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="/assets/images/cheese/swiss.jpg" class="cheese" alt="camembert" style="width:100%">
+          <img src="{{ cheese.image }}" class="cheese" alt="{{ cheese.name }}" style="width:100%">
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy, APP_BASE_HREF } from '@angular/common';
 
 import { AppComponent } from './app.component';
@@ -16,7 +17,11 @@ const routes: Routes = [
   { path: 'home', component: GridComponent },
   //{ path: 'cheese/:id', component: CheeseComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'home', children: [
+      { path: 'cheese', component: CheeseComponent }] // Each cheese in the grid will be a link to each individual cheese
+  },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -31,7 +36,9 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    FormsModule,
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
