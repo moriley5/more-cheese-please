@@ -15,12 +15,9 @@ import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   { path: 'home', component: GridComponent },
-  //{ path: 'cheese/:id', component: CheeseComponent },
+  { path: 'cheese/:id', component: CheeseComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'home', children: [
-      { path: 'cheese', component: CheeseComponent }] // Each cheese in the grid will be a link to each individual cheese
-  },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
