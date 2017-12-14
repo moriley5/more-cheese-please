@@ -26,5 +26,6 @@ export class CheeseComponent implements OnInit {
 interface CheeseProfile {
   name: string,
   origin: string,
-  description: string
+  description: string,
+  image: string
 }
