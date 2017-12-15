@@ -4,11 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\about",
+    "\\src\\app\\cheese",
     "\\src\\app\\contact",
     "\\src\\app\\grid",
     "\\src\\app\\header",
-    "\\src\\app\\navigation"
+    "\\src\\assets\\images",
+    "\\src\\assets\\images\\cheese"
   ],
-  "SelectedNode": "\\src\\app\\contact\\contact.component.html",
+  "SelectedNode": "\\src\\app\\grid\\grid.component.html",
   "PreviewInSolutionExplorer": false
 }

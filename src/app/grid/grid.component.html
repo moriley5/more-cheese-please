@@ -3,7 +3,7 @@
   <div class="row">
     <div *ngFor="let cheese of cheeses" class="col-md-4">
       <div class="thumbnail">
-        <a routerLink="/cheese/{{ cheese.id }}"><img src="{{ cheese.image }}" class="cheese" alt="{{ cheese.name }}" style="width:100%"></a>
+        <a routerLink="/cheeses/{{ cheese.id }}"><img src="{{ cheese.image }}" class="cheese" alt="{{ cheese.name }}" style="width:100%"></a>
       </div>
     </div>
   </div>
