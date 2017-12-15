@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GridComponent } from '../grid/grid.component';
 
 @Component({
   selector: 'app-cheese',
@@ -10,19 +11,14 @@ export class CheeseComponent implements OnInit {
   // Declare properties of individual cheese
   cheese: Cheese;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
-  // Hover Event
-  mouseEnter(div: string) {
-    console.log("Mouse enter: " + div);
-  }
-
 }
 
-// Create interface (need to put this in a model)
+// Create Cheese interface (This needs to be moved to a Model eventually)
 interface Cheese {
   id: number,
   name: string,
