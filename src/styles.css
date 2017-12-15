@@ -5,13 +5,14 @@ body, html {
   height: 100%;
 }
 
-.form-area {
-  background-color: #FAFAFA;
+#contact-form {
   padding: 10px 40px 60px;
-  margin: 10px 0px 60px;
-  border: 1px solid GREY;
+  margin: 0 auto;
 }
 
+#success-message {
+  display: none;
+}
 
 footer {
   position: fixed;
