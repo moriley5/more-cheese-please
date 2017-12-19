@@ -12,20 +12,4 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  goToAboutPage() {
-    console.log("Clicked on About!");
-    // How to redirect to entirely new page???
-    this.router.navigate(['/about']);
-  }
-
-  goToContactPage() {
-    console.log("Clicked on Contact!");
-    // How to redirect to entirely new page???
-    this.router.navigate(['/contact']);
-
-    /* TO-DO
-    Create a navigation.module.ts file with its own route configuration
-    */
-  }
 }
