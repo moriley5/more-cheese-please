@@ -5,9 +5,14 @@ body, html {
   height: 100%;
 }
 
-#contact-form {
-  padding: 10px 40px 60px;
-  margin: 0 auto;
+.well, .form-horizontal {
+  /*padding: 10px 40px 60px;
+  margin: 0 auto;*/
+  display: block;
+  width: 90%;
+  padding: 2em;
+  margin: 2em auto;
+  /*background: #D3D3D3;*/
 }
 
 #success-message {

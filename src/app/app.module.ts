@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy, APP_BASE_HREF } from '@angular/common';
 
 import { AppComponent } from './app.component';
@@ -33,9 +33,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    RouterModule.forRoot(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
