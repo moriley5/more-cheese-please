@@ -1,7 +1,7 @@
 <div id="contact-form" class="container">
   <form [formGroup]="form" (ngSubmit)="onSubmit(form)" class="well form-horizontal">
     <fieldset>
-
+      <!--First Name-->
       <div class="form-group">
         <label class="col-md-4 control-label">First Name</label>
         <div class="col-md-4 inputGroupContainer">
@@ -14,7 +14,7 @@
           </div>
         </div>
       </div>
-
+      <!--Last Name-->
       <div class="form-group">
         <label class="col-md-4 control-label">Last Name</label>
         <div class="col-md-4 inputGroupContainer">
@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-
+      <!--Email-->
       <div class="form-group">
         <label class="col-md-4 control-label">E-mail</label>
         <div class="col-md-4 inputGroupContainer">
@@ -40,7 +40,7 @@
           </div>
         </div>
       </div>
-
+      <!--Message-->
       <div class="form-group">
         <label class="col-md-4 control-label">Message</label>
         <div class="col-md-4 inputGroupContainer">
@@ -53,16 +53,15 @@
           </div>
         </div>
       </div>
-
+      <!--Success Message-->
       <div id="success-message" class="alert alert-success" role="alert">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thank you for your message. We'll be in touch soon!</div>
-
+      <!--Submit Button-->
       <div class="form-group">
         <label class="col-md-4 control-label"></label>
         <div class="col-md-4">
           <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Send <span class="glyphicon glyphicon-send"></span></button>
         </div>
       </div>
-
     </fieldset>
   </form>
 </div>
