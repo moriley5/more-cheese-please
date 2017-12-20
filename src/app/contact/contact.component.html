@@ -1,68 +1,67 @@
 <div id="contact-form" class="container">
   <form [formGroup]="form" (ngSubmit)="onSubmit(form)" class="well form-horizontal">
     <fieldset>
-
+      <!--First Name-->
       <div class="form-group">
         <label class="col-md-4 control-label">First Name</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
             <input class="form-control" type="text" formControlName="firstName" placeholder="First Name">
-            <div *ngIf="form.get('firstName').hasError('required')">
-              <p style="color: red">Oops, please provide a first name</p>
+            <div *ngIf="form.get('firstName').hasError('required')" class="alert-danger">
+              <p>Oops, please provide a first name</p>
             </div>
           </div>
         </div>
       </div>
-
+      <!--Last Name-->
       <div class="form-group">
         <label class="col-md-4 control-label">Last Name</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
             <input class="form-control" type="text" formControlName="lastName" placeholder="Last Name">
-            <div *ngIf="form.get('lastName').hasError('required')">
-              <p style="color: red">Oops, please provide a last name</p>
+            <div *ngIf="form.get('lastName').hasError('required')" class="alert-danger">
+              <p>Oops, please provide a last name</p>
             </div>
           </div>
         </div>
       </div>
-
+      <!--Email-->
       <div class="form-group">
         <label class="col-md-4 control-label">E-mail</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
             <input class="form-control" type="text" formControlName="email" placeholder="E-mail">
-            <div *ngIf="form.get('email').hasError('pattern')">
-              <p style="color: red">Oops, please provide a valid email</p>
+            <div *ngIf="form.get('email').hasError('pattern')" class="alert-danger">
+              <p>Oops, please provide a valid email</p>
             </div>
           </div>
         </div>
       </div>
-
+      <!--Message-->
       <div class="form-group">
         <label class="col-md-4 control-label">Message</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
             <textarea class="form-control" formControlName="message" placeholder="Write your message here..."></textarea>
-            <div *ngIf="form.get('message').hasError('required')">
-              <p style="color: red">Oops, please provide a message</p>
+            <div *ngIf="form.get('message').hasError('required')" class="alert-danger">
+              <p>Oops, please provide a message</p>
             </div>
           </div>
         </div>
       </div>
-
+      <!--Success Message-->
       <div id="success-message" class="alert alert-success" role="alert">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thank you for your message. We'll be in touch soon!</div>
-
+      <!--Submit Button-->
       <div class="form-group">
         <label class="col-md-4 control-label"></label>
         <div class="col-md-4">
           <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Send <span class="glyphicon glyphicon-send"></span></button>
         </div>
       </div>
-
     </fieldset>
   </form>
 </div>
