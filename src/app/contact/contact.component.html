@@ -1,6 +1,5 @@
 <div id="contact-form" class="container">
   <form [formGroup]="form" (ngSubmit)="onSubmit(form)" class="well form-horizontal">
-    <fieldset>
       <!--First Name-->
       <div class="form-group">
         <label class="col-md-4 control-label">First Name</label>
@@ -34,7 +33,7 @@
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
             <input class="form-control" type="text" formControlName="email" placeholder="E-mail">
-            <div *ngIf="form.get('email').hasError('pattern')" class="alert-danger">
+            <div *ngIf="form.get('email').hasError('email')" class="alert-danger">
               <p>Oops, please provide a valid email</p>
             </div>
           </div>
@@ -62,6 +61,5 @@
           <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Send <span class="glyphicon glyphicon-send"></span></button>
         </div>
       </div>
-    </fieldset>
   </form>
 </div>
