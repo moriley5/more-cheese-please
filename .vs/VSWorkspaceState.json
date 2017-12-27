@@ -4,11 +4,12 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\about",
+    "\\src\\app\\cheese",
     "\\src\\app\\contact",
     "\\src\\app\\grid",
     "\\src\\app\\header",
     "\\src\\app\\navigation"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\app\\cheese\\cheese.component.ts",
   "PreviewInSolutionExplorer": false
 }
