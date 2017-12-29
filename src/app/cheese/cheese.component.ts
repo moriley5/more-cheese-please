@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GridComponent } from '../grid/grid.component';
+import { Cheese } from '../cheese';
 
 @Component({
   selector: 'app-cheese',
@@ -9,20 +10,11 @@ import { GridComponent } from '../grid/grid.component';
 export class CheeseComponent implements OnInit {
 
   // Declare properties of individual cheese
-  cheese: Cheese;
+  @Input() cheese: Cheese;
 
   constructor() {
   }
 
   ngOnInit() {
   }
-}
-
-// Create Cheese interface (This needs to be moved to a Model eventually)
-interface Cheese {
-  id: number,
-  name: string,
-  origin: string,
-  description: string,
-  image: string
 }
