@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Cheese } from '../cheese';
 
 @Component({
   selector: 'app-grid',
@@ -8,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class GridComponent implements OnInit {
 
   // Create an array of cheeses
-  cheeses = [
+  @Input() cheeses: Cheese[] =
+  [
     { id: 1, name: 'Asiago', origin: 'Italy', description: 'Slice it fresh and use it on a panini', image: '/assets/images/cheese/asiago.jpg' },
     { id: 2, name: 'Brie', origin: 'France', description: 'Tastes like heaven', image: '/assets/images/cheese/brie.jpg' },
     { id: 3, name: 'Camembert', origin: 'Normandy (northern France)', description: 'Soft and creamy, the sweet sister of Brie', image: '/assets/images/cheese/camembert.jpg' },
@@ -24,8 +26,15 @@ export class GridComponent implements OnInit {
     //{ name: 'American', origin: 'America', description: 'Processed, naturally' }
   ]
 
+  @Input() selectedCheese: Cheese;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  // To handle click event of a specific cheese
+  onCheeseSelect(cheese: Cheese) {
+    this.selectedCheese = cheese;
   }
 }
